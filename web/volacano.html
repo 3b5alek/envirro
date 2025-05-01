@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volcano Information | Enviiro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+    }
+
+    .navbar {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo-text .en { color: #fff; }
+    .logo-text .vii { color: red; }
+    .logo-text .ro { color: #fff; }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      display: inline;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 8px 16px;
+      background-color: #e60000;
+      color: white;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #ff3333;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background-image: url('images/bgvolcano.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+    }
+
+    .disaster-page {
+      padding: 100px 20px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #111;
+    }
+
+    .disaster-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .image-gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-gallery img {
+      max-width: 30%;
+      min-width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .content p {
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .view-reports-btn, .back-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #e60000;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .view-reports-btn:hover, .back-btn:hover {
+      background-color: #ff1a1a;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2em;
+      }
+
+      .hero-text p {
+        font-size: 1em;
+      }
+
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-gallery img {
+        max-width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-text">
+      <span class="en">En</span><span class="vii">vii</span><span class="ro">ro</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="user.html" class="nav-btn">Back to Menu</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Volcanoes: Earth's Fiery Mountains</h1>
+      <p>Learn how volcanoes shape the Earth and the dangers they pose.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="disaster-page">
+    <h2 class="disaster-title">Understanding Volcanic Activity</h2>
+
+    <div class="image-gallery">
+      <img src="images/volcano1.jpg" alt="Volcano erupting">
+      <img src="images/volcano2.jpg" alt="Lava flow">
+      <img src="images/volcano3.jpg" alt="Volcanic landscape">
+    </div>
+
+    <div class="content">
+      <p>
+        Volcanoes are powerful geological formations that occur when magma, gases, and ash escape from beneath the Earth's crust. Often forming mountains, volcanoes can erupt with violent explosions, pouring molten rock (lava) over the surrounding terrain, reshaping entire landscapes, and altering ecosystems in moments.
+      </p>
+
+      <p>
+        There are different types of volcanoes, including stratovolcanoes, shield volcanoes, and cinder cones. Each has its own structure, eruption style, and hazards. For example, stratovolcanoes like Mount Vesuvius are known for explosive eruptions, while shield volcanoes like those in Hawaii produce slow, steady lava flows.
+      </p>
+
+      <p>
+        Volcanic eruptions can have devastating effects on communities, causing loss of life, destruction of property, and long-term environmental changes. However, volcanoes also enrich soil with minerals, creating fertile lands for agriculture. Understanding volcanic activity is crucial for disaster preparedness and minimizing risk to human life.
+      </p>
+
+      <p>
+        Scientists continuously monitor volcanoes using seismic sensors, satellite imagery, and ground observations. These efforts help predict eruptions and provide early warnings. Volcano reports submitted by experts are essential in sharing accurate information with the public and authorities.
+      </p>
+    </div>
+
+    <div class="button-container">
+      <a href="volcano.jsp" class="view-reports-btn">View Volcano Reports</a>
+      <a href="user.html" class="back-btn">Back</a>
+    </div>
+  </main>
+</body>
+</html>
