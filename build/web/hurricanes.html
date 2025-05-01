@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hurricane Information | Enviiro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+    }
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .logo-text .en { color: #fff; }
+    .logo-text .vii { color: red; }
+    .logo-text .ro { color: #fff; }
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      display: inline;
+    }
+    .nav-links a {
+      text-decoration: none;
+      padding: 8px 16px;
+      background-color: #e60000;
+      color: white;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .nav-links a:hover {
+      background-color: #ff3333;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background-image: url('images/bghurricane.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .hero-text p {
+      font-size: 1.2em;
+    }
+
+    /* Main Content */
+    .disaster-page {
+      padding: 100px 20px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #111;
+    }
+    .disaster-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .image-gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .image-gallery img {
+      max-width: 30%;
+      min-width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .content p {
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .view-reports-btn, .back-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #e60000;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .view-reports-btn:hover, .back-btn:hover {
+      background-color: #ff1a1a;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2em;
+      }
+      .hero-text p {
+        font-size: 1em;
+      }
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-gallery img {
+        max-width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo-text">
+      <span class="en">En</span><span class="vii">vii</span><span class="ro">ro</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="user.html" class="nav-btn">Back to Menu</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hurricanes: Nature's Powerful Storms</h1>
+      <p>Explore the science and impact of one of nature’s most powerful forces.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="disaster-page">
+    <h2 class="disaster-title">Understanding Hurricanes</h2>
+
+    <div class="image-gallery">
+      <img src="images/hurricane1.jpg" alt="Satellite view of a hurricane">
+      <img src="images/hurricane2.jpg" alt="Flooded area after hurricane">
+      <img src="images/hurricane3.jpg" alt="Strong winds bending palm trees">
+    </div>
+
+    <div class="content">
+      <p>Hurricanes, also known as cyclones or typhoons depending on the region, are massive storm systems that form over warm ocean waters. They bring strong winds, heavy rainfall, storm surges, and flooding to coastal and inland areas.</p>
+      <p>A hurricane's strength is categorized from 1 to 5 on the Saffir-Simpson scale, with Category 5 being the most intense. These storms can span hundreds of kilometers and cause widespread destruction to homes, power lines, and infrastructure.</p>
+      <p>The impacts of hurricanes include flooding, wind damage, power outages, and disruption of daily life. Preparing in advance with evacuation plans, emergency supplies, and secure shelters is critical to minimizing harm.</p>
+      <p>Meteorologists track hurricanes using satellite data, aircraft reconnaissance, and radar systems. Early warnings and expert reports play a key role in informing communities, enabling evacuations, and reducing casualties during hurricane events.</p>
+    </div>
+
+    <div class="button-container">
+      <a href="hurricane.jsp" class="view-reports-btn">View Hurricane Reports</a>
+      <a href="user.html" class="back-btn">Back</a>
+    </div>
+  </main>
+</body>
+</html>

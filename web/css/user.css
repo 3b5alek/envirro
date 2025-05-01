@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(0deg, #000000 1%, #3a3a3a 99%);
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #111;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e60000;
+}
+
+.logo-text .en,
+.logo-text .vii,
+.logo-text .ro {
+  color: #e60000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a.nav-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #e60000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.nav-links a.nav-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+.panel-container {
+  display: flex;
+  height: calc(100vh - 80px); /* Adjusted for navbar */
+  width: 100%;
+  overflow: hidden;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  transition: flex 0.5s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.panel a {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.panel:hover {
+  flex: 2;
+}
+
+.panel:hover a {
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 1.4rem;
+}

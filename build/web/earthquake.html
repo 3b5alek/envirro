@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Earthquake Information | Enviiro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+    }
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .logo-text .en { color: #fff; }
+    .logo-text .vii { color: red; }
+    .logo-text .ro { color: #fff; }
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      display: inline;
+    }
+    .nav-links a {
+      text-decoration: none;
+      padding: 8px 16px;
+      background-color: #e60000;
+      color: white;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .nav-links a:hover {
+      background-color: #ff3333;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background-image: url('images/bgearthquake.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .hero-text p {
+      font-size: 1.2em;
+    }
+
+    /* Main Content */
+    .disaster-page {
+      padding: 100px 20px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #111;
+    }
+    .disaster-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .image-gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .image-gallery img {
+      max-width: 30%;
+      min-width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .content p {
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .view-reports-btn, .back-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #e60000;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .view-reports-btn:hover, .back-btn:hover {
+      background-color: #ff1a1a;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2em;
+      }
+      .hero-text p {
+        font-size: 1em;
+      }
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-gallery img {
+        max-width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo-text">
+      <span class="en">En</span><span class="vii">vii</span><span class="ro">ro</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="user.html" class="nav-btn">Back to Menu</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Earthquakes: Shaking the Earth's Surface</h1>
+      <p>Uncover the science behind seismic activity and its global impact.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="disaster-page">
+    <h2 class="disaster-title">Understanding Earthquakes</h2>
+
+    <div class="image-gallery">
+      <img src="images/Ahmed.jpg" alt="Cracked ground after earthquake">
+      <img src="images/earthquake2.jpg" alt="Collapsed building">
+      <img src="images/earthquake3.jpg" alt="Seismic activity graph">
+    </div>
+
+    <div class="content">
+      <p>Earthquakes are sudden movements of the Earth's crust caused by the release of energy stored along faults or by volcanic activity. This energy travels as seismic waves, shaking the ground and potentially causing widespread damage depending on the quake's magnitude and depth.</p>
+      <p>Earthquakes can strike without warning and vary in intensity, from mild tremors to massive quakes that destroy buildings and infrastructure. Regions near tectonic plate boundaries, like the Pacific Ring of Fire, are particularly prone to frequent seismic activity.</p>
+      <p>The consequences of earthquakes include collapsed structures, fires, landslides, tsunamis, and disruptions to essential services. Preparedness is key—having emergency kits, reinforced structures, and evacuation plans can save lives during such events.</p>
+      <p>Scientists use seismographs, GPS, and satellite technology to monitor tectonic activity and detect earthquake patterns. Rapid sharing of expert reports helps inform the public and emergency responders, improving reaction times and minimizing risk.</p>
+    </div>
+
+    <div class="button-container">
+      <a href="earthquake.jsp" class="view-reports-btn">View Earthquake Reports</a>
+      <a href="user.html" class="back-btn">Back</a>
+    </div>
+  </main>
+</body>
+</html>

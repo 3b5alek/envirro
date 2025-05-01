@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enviiro - Sign Up</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-text"><span class="en">En</span><span class="vii">vii</span><span class="ro">ro</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Sign In</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="signup-section">
+      <h1 class="signup-title">
+        Create an Account at <span class="logo-text"><span class="en">En</span><span class="vii">vii</span><span class="ro">ro</span></span>
+      </h1>
+      <div id="signup-error" class="error-message"></div>
+
+      <form action="signup.jsp" method="post" class="signup-form">
+        <input type="text" name="fname" placeholder="First name" required />
+        <input type="text" name="lname" placeholder="Last name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <button type="submit">Sign Up</button>
+        <p class="signin-link">Already have an account? <a href="index.html">Sign in here</a>.</p>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
+      const messageDiv = document.getElementById('signup-error');
+
+      if (error) {
+        let message = 'An unknown error occurred during signup.';
+        if (error === 'duplicate_email') {
+          message = 'Email address is already registered.';
+        } else if (error === 'missing_fields') {
+          message = 'All fields are required for signup.';
+        } else if (error === 'db_error') {
+          message = 'Database error during signup. Please try again later.';
+        } else if (error === 'insert_failed') {
+          message = 'Signup failed. Please try again.';
+        } else if (error === 'unexpected') {
+          message = 'An unexpected error occurred during signup.';
+        }
+        messageDiv.textContent = message;
+        messageDiv.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

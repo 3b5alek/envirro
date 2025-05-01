@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wildfire Information | Enviiro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+    }
+
+    .navbar {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+    }
+
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo-text .en { color: #fff; }
+    .logo-text .vii { color: red; }
+    .logo-text .ro { color: #fff; }
+
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+      display: inline;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 8px 16px;
+      background-color: #e60000;
+      color: white;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #ff3333;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background-image: url('images/bgwildfire.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+    }
+
+    .disaster-page {
+      padding: 100px 20px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #111;
+    }
+
+    .disaster-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .image-gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-gallery img {
+      max-width: 30%;
+      min-width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .content p {
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .view-reports-btn, .back-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #e60000;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .view-reports-btn:hover, .back-btn:hover {
+      background-color: #ff1a1a;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2em;
+      }
+
+      .hero-text p {
+        font-size: 1em;
+      }
+
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-gallery img {
+        max-width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo-text">
+      <span class="en">En</span><span class="vii">vii</span><span class="ro">ro</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="user.html" class="nav-btn">Back to Menu</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Wildfires: Uncontrollable Blazes of Nature</h1>
+      <p>Discover the causes, impact, and response to devastating wildfires.</p>
+    </div>
+  </section>
+
+  <main class="disaster-page">
+    <h2 class="disaster-title">Understanding Wildfire Risks</h2>
+
+    <div class="image-gallery">
+      <img src="images/wildfire1.jpg" alt="Forest on fire">
+      <img src="images/wildfire2.jpg" alt="Firefighters battling wildfire">
+      <img src="images/wildfire3.jpg" alt="Smoke rising from wildfire">
+    </div>
+
+    <div class="content">
+      <p>
+        Wildfires are uncontrolled fires that rapidly spread through vegetation, forests, grasslands, and sometimes into populated areas. They can ignite due to natural causes like lightning or human activities such as unattended campfires or arson.
+      </p>
+
+      <p>
+        Driven by wind, heat, and dry conditions, wildfires can grow quickly and engulf vast areas, destroying homes, wildlife habitats, and natural resources. Smoke from wildfires can also affect air quality over large distances, posing health risks.
+      </p>
+
+      <p>
+        Wildfire impacts include property damage, loss of life, displacement of communities, and environmental degradation. Preparedness through firebreaks, evacuation plans, and public awareness is crucial in high-risk zones.
+      </p>
+
+      <p>
+        Fire agencies monitor wildfire activity using satellites, drones, and ground patrols. Experts issue reports and warnings to guide emergency response and public safety efforts. Early action can save lives and limit destruction.
+      </p>
+    </div>
+
+    <div class="button-container">
+      <a href="wildFire.jsp" class="view-reports-btn">View Wildfire Reports</a>
+      <a href="user.html" class="back-btn">Back</a>
+    </div>
+  </main>
+</body>
+</html>

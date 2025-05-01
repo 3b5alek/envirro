@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scientist Report Submission</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="css/sc.css"> 
+</head>
+<body>
+
+  <header>
+    <h1>Scientist Report Portal</h1>
+    <div class="nav-buttons">
+      <!-- Consider getting user context from session instead -->
+      <button onclick="window.location.href='user.html'">User Page</button>
+      <!-- Logout should ideally invalidate session in a logout.jsp -->
+      <button onclick="window.location.href='index.html'">Logout</button>
+    </div>
+  </header>
+
+  <!-- Placeholder for status messages -->
+  <div id="statusMessageContainer" class="status-message-container">
+      <div id="statusMessage" class="status-message"></div>
+  </div>
+
+  <!-- Form submits to saveReport.jsp -->
+  <form class="report-form" action="saveReport.jsp" method="post">
+    <h2>Submit Disaster Report</h2>
+
+    <label for="scientistName">Scientist Name</label>
+    <!-- Consider pre-filling from session if user is logged in -->
+    <input type="text" id="scientistName" name="scientistName" placeholder="Enter your name" required>
+
+    <label for="disasterType">Type of Disaster</label>
+    <select id="disasterType" name="disasterType" required>
+      <option value="">-- Select Disaster Type --</option>
+      <option value="earthquake">Earthquake</option>
+      <option value="tsunami">Tsunami</option>
+      <option value="wildFire">Wildfire</option>
+      <option value="radiation">Radiation</option>
+      <option value="hurricane">Hurricane</option>
+      <option value="volcano">Volcano</option>
+      <option value="asteroids">Asteroid</option>
+    </select>
+
+    <label for="headername">Report Title/Header</label>
+    <input type="text" id="headername" name="headername" placeholder="Concise title for the report" required>
+
+    <label for="reportText">Full Report Details</label>
+    <textarea id="reportText" name="reportText" rows="8" placeholder="Enter full report details here..." required></textarea>
+
+    <button type="submit">Submit Report</button>
+  </form>
+
+  <script>
+    // Display status messages passed via URL parameter
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const status = urlParams.get('status');
+      const code = urlParams.get('code'); // Optional error code
+      const messageDiv = document.getElementById('statusMessage');
+
+      if (status) {
+        let message = '';
+        let messageClass = '';
+
+        if (status === 'success') {
+          message = 'Report submitted successfully!';
+          messageClass = 'success';
+        } else if (status === 'failure') {
+          message = 'Failed to submit report. Please try again.';
+          messageClass = 'error';
+        } else if (status === 'error') {
+          message = 'An error occurred while submitting the report.';
+          if (code === 'db_error') {
+            message += ' (Database issue)';
+          } else if (code === 'validation_error') {
+            message += ' (Missing information)';
+          } else if (code === 'unexpected') {
+              message += ' (Unexpected error)';
+          }
+          messageClass = 'error';
+        }
+
+        if (message) {
+            messageDiv.textContent = message;
+            messageDiv.className = 'status-message ' + messageClass;
+            messageDiv.style.display = 'block';
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

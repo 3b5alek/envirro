@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asteroid Information | Enviiro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a1a;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+    }
+    .logo-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .logo-text .en { color: #fff; }
+    .logo-text .vii { color: red; }
+    .logo-text .ro { color: #fff; }
+    .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      display: inline;
+    }
+    .nav-links a {
+      text-decoration: none;
+      padding: 8px 16px;
+      background-color: #e60000;
+      color: white;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .nav-links a:hover {
+      background-color: #ff3333;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background-image: url('images/bgastroids.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+    }
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    .hero-text p {
+      font-size: 1.2em;
+    }
+
+    /* Main content */
+    .disaster-page {
+      padding: 100px 20px 20px; /* extra top padding for fixed navbar */
+      max-width: 1000px;
+      margin: auto;
+      background-color: #111;
+    }
+    .disaster-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .image-gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .image-gallery img {
+      max-width: 30%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .content p {
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .view-reports-btn, .back-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #e60000;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .view-reports-btn:hover, .back-btn:hover {
+      background-color: #ff1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo-text">
+      <span class="en">En</span><span class="vii">vii</span><span class="ro">ro</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="user.html" class="nav-btn">Back to Menu</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Asteroids: Space Rocks on a Collision Course</h1>
+      <p>Discover how these cosmic objects pose threats and what we’re doing to protect Earth.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="disaster-page">
+    <h2 class="disaster-title">Understanding the Asteroid Threat</h2>
+
+    <div class="image-gallery">
+      <img src="images/asteroid1.jpg" alt="Asteroid in space">
+      <img src="images/asteroid2.jpg" alt="Impact crater on Earth">
+      <img src="images/asteroid3.jpg" alt="Simulation of asteroid trajectory">
+    </div>
+
+    <div class="content">
+      <p>Asteroids are rocky objects that orbit the Sun, mostly found in the asteroid belt between Mars and Jupiter. While many remain in stable orbits, some can enter trajectories that bring them close to Earth, posing potential impact threats.</p>
+      <p>Most asteroids are relatively small, but even a modest-sized asteroid can cause significant damage if it strikes Earth. Past impacts have created large craters and contributed to mass extinctions, highlighting the importance of monitoring near-Earth objects (NEOs).</p>
+      <p>An asteroid impact could lead to shockwaves, fires, tsunamis, or atmospheric effects depending on its size and location. Early detection and deflection strategies are vital to preventing catastrophic consequences.</p>
+      <p>Scientists use telescopes, radar systems, and space missions to detect, track, and study asteroids. International space agencies maintain watchlists of potentially hazardous asteroids and publish expert reports to inform the public and plan defense efforts if needed.</p>
+    </div>
+
+    <div class="button-container">
+      <a href="astroids.jsp" class="view-reports-btn">View Asteroid Reports</a>
+      <a href="user.html" class="back-btn">Back</a>
+    </div>
+  </main>
+</body>
+</html>

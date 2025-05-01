@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(0deg, #000000 1%, #3a3a3a 99%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #111;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e60000;
+}
+
+.logo-text .en,
+.logo-text .vii,
+.logo-text .ro {
+  color: #e60000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links .nav-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #e60000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.nav-links .nav-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+.disaster-page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.disaster-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  width: 30%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.content p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.button-container {
+  margin-top: 2rem;
+}
+
+.view-reports-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #e60000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.view-reports-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+.report-table-container {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.styled-report-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.styled-report-table th,
+.styled-report-table td {
+  padding: 1rem;
+  border: 1px solid #444;
+  text-align: left;
+  vertical-align: top;
+}
+
+.styled-report-table thead {
+  background-color: #e60000;
+}
+
+.styled-report-table pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: inherit;
+  color: #eee;
+}
+
+.error-message {
+  color: #ff4444;
+  margin-top: 2rem;
+  font-weight: bold;
+}
